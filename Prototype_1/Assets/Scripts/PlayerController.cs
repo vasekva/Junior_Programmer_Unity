@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
@@ -37,31 +36,31 @@ public class PlayerController : MonoBehaviour
     
     void FixedUpdate()
     {
-        GetInput();
+        // GetInput();
         // HandleMotor();
         // HandleSteering();
         // UpdateWheels();
     }
 
-    public void OnMove(InputAction.CallbackContext context)
-    {
-        mover.SetMoveVector(context.ReadValue<Vector2>());
-    }
-
-    private void GetInput()
-    {
-        horizontalInput = Input.GetAxis("Horizontal");
-        verticalInput = Input.GetAxis("Vertical");
-        isBraking = Input.GetKey(KeyCode.Space);
-
-        if (Input.GetKeyUp(KeyCode.C))
-        {
-            Debug.Log("CAMERA");
-            cameraId = cameraId == 0 ? 1 : 0;
-            if (cameraId == 0)
-                GetComponent<ToggleCamera>().ShowFirstPersonView();
-            else
-                GetComponent<ToggleCamera>().ShowOverheadView();
-        }
-    }
+    // public void OnMove(InputAction.CallbackContext context)
+    // {
+    //     mover.SetMoveVector(context.ReadValue<Vector2>());
+    // }
+    //
+    // private void GetInput()
+    // {
+    //     horizontalInput = Input.GetAxis("Horizontal");
+    //     verticalInput = Input.GetAxis("Vertical");
+    //     isBraking = Input.GetKey(KeyCode.Space);
+    //
+    //     if (Input.GetKeyUp(KeyCode.C))
+    //     {
+    //         Debug.Log("CAMERA");
+    //         cameraId = cameraId == 0 ? 1 : 0;
+    //         if (cameraId == 0)
+    //             GetComponent<ToggleCamera>().ShowFirstPersonView();
+    //         else
+    //             GetComponent<ToggleCamera>().ShowOverheadView();
+    //     }
+    // }
 }
