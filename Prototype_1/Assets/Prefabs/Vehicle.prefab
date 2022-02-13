@@ -117,6 +117,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -141,6 +142,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &4911165195676029401
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -211,6 +213,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -235,6 +238,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &4911165195787433168
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -432,6 +436,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -456,6 +461,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &4911165196286445931
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -616,6 +622,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -640,6 +647,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &4911165196988927567
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -682,19 +690,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c6fc94171a44f849a44b980b0d8cc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  motorForce: 1000
-  brakeForce: 0
-  maxSteeringAngle: 30
-  fl_wheelCollider: {fileID: 4911165197157285372}
-  fr_wheelCollider: {fileID: 4911165195498734589}
-  rl_wheelCollider: {fileID: 4911165195299190441}
-  rr_wheelCollider: {fileID: 4911165195364242380}
-  fl_wheelTransform: {fileID: 4911165197151374491}
-  fr_wheelTransform: {fileID: 4911165196962391448}
-  rl_wheelTransform: {fileID: 4911165195314072825}
-  rr_wheelTransform: {fileID: 4911165197146862933}
-  speed: 40
-  playerIndex: 0
 --- !u!114 &4911165196988927560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -796,13 +791,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4911165197028240720}
-  m_LocalRotation: {x: -0, y: -0.053543933, z: -0, w: 0.99856555}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.7173835, y: 0.1772205, z: 0.86751443}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4911165197305526940}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: -6.1390004, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4911165197028240717
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -826,6 +821,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -850,6 +846,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &4911165197028240723
 MeshCollider:
   m_ObjectHideFlags: 0

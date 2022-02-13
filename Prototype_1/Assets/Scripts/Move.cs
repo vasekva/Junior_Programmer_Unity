@@ -55,13 +55,13 @@ public class Move : MonoBehaviour
         // } 
     }
     
-    private void ApplyBreaking()
-    {
-        // fl_wheelCollider.brakeTorque = currentBreakForce;
-        // fr_wheelCollider.brakeTorque = currentBreakForce;
-        rl_wheelCollider.brakeTorque = currentBrakeForce;
-        rr_wheelCollider.brakeTorque = currentBrakeForce;
-    }
+    // private void ApplyBreaking()
+    // {
+    //     fl_wheelCollider.brakeTorque = currentBrakeForce;
+    //     fr_wheelCollider.brakeTorque = currentBrakeForce;
+    //     rl_wheelCollider.brakeTorque = currentBrakeForce;
+    //     rr_wheelCollider.brakeTorque = currentBrakeForce;
+    // }
     
     private void HandleSteering()
     {
@@ -85,6 +85,7 @@ public class Move : MonoBehaviour
         
         wheelCollider.GetWorldPose(out pos, out rot);
         wheelTransform.rotation = rot;
+        wheelTransform.position = pos;
     }
 }
 
