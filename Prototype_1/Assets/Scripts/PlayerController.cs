@@ -34,8 +34,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform rl_wheelTransform;
     [SerializeField] private Transform rr_wheelTransform;
 
-    private ToggleCamera camera;
-    private int cameraId;
+    private int cameraId = 0;
     
     private void GetInput()
     {
@@ -43,14 +42,15 @@ public class PlayerController : MonoBehaviour
         verticalInput = Input.GetAxis(VERTICAL);
         isBraking = Input.GetKey(KeyCode.Space);
 
-        // if (Input.GetKey(KeyCode.A))
-        // {
-        //     cameraId = (cameraId == 0) ? 1 : 0;
-        //     if (cameraId == 0)
-        //         camera.ShowOverheadView();
-        //     else
-        //         camera.ShowFirstPersonView();
-        // }
+        if (Input.GetKeyUp(KeyCode.C))
+        {
+            Debug.Log("CAMERA");
+            cameraId = cameraId == 0 ? 1 : 0;
+            if (cameraId == 0)
+                GetComponent<ToggleCamera>().ShowFirstPersonView();
+            else
+                GetComponent<ToggleCamera>().ShowOverheadView();
+        }
     }
 
     void FixedUpdate()
