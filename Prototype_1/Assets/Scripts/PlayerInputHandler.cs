@@ -11,7 +11,7 @@ public class PlayerInputHandler : MonoBehaviour
     private int cameraId = 0;
     private float horizontalInput;
     private float verticalInput;
-    private bool  isBraking;
+    // private bool  isBraking;
     
     private void Awake()
     {
@@ -30,7 +30,7 @@ public class PlayerInputHandler : MonoBehaviour
     {
         horizontalInput = Input.GetAxis("Horizontal" + inputId);
         verticalInput = Input.GetAxis("Vertical" + inputId);
-        isBraking = Input.GetKey(KeyCode.Space);
+        // isBraking = Input.GetKey(KeyCode.Space);
 
         mover.SetMoveVector(new Vector2(horizontalInput, verticalInput));
         

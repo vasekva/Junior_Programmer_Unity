@@ -22,11 +22,6 @@ public class Move : MonoBehaviour
     [SerializeField] private Transform rr_wheelTransform;
 
     private Vector2 moveVector;
-    
-    void Start()
-    {
-        
-    }
 
     public void SetMoveVector(Vector2 vectorValue)
     {
