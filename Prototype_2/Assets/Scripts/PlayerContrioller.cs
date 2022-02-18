@@ -22,7 +22,7 @@ public class PlayerContrioller : MonoBehaviour
             transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * playerSpeed);
         
         if (Input.GetKeyDown(KeyCode.Space))
-            Instantiate(projectilePrefab, projectileSpawnPoint.position, projectilePrefab.transform.rotation);
+            Instantiate(projectilePrefab, projectileSpawnPoint.position, transform.rotation);
         if (Input.GetKey(KeyCode.Q))
             transform.Rotate(Vector3.up, -1.0f);
         if (Input.GetKey(KeyCode.E))
