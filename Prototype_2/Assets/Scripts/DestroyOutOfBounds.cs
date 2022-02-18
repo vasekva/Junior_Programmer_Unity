@@ -7,9 +7,12 @@ public class DestroyOutOfBounds : MonoBehaviour
 {
     private float topBound = 30;
     private float lowerBound = -10;
+
+    private GameManager gameManager;
+    
     void Start()
     {
-        
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     void Update()
@@ -20,7 +23,7 @@ public class DestroyOutOfBounds : MonoBehaviour
         }
         else if (transform.position.z < lowerBound || transform.position.x < -30 || transform.position.x > 30)
         {
-            Debug.Log("Game over!");
+            gameManager.AddLives(-1);
             Destroy(gameObject);
         }
     }

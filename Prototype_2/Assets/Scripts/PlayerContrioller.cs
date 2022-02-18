@@ -7,9 +7,10 @@ public class PlayerContrioller : MonoBehaviour
     private float horizontalInput;
     private float verticalInput;
 
-    private int playerSpeed = 20;
+    private int playerSpeed = 15;
     private float xRange = 20.0f;
     public GameObject projectilePrefab;    
+    public Transform projectileSpawnPoint;
     
     void Start()
     {
@@ -26,7 +27,7 @@ public class PlayerContrioller : MonoBehaviour
             transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * playerSpeed);
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            Instantiate(projectilePrefab, projectileSpawnPoint.position, projectilePrefab.transform.rotation);
         }
     }
 
@@ -40,8 +41,8 @@ public class PlayerContrioller : MonoBehaviour
     }
     private bool isValidOffsetZ(float offsetZ)
     {
-        if (transform.position.z + offsetZ >= 15 
-            || transform.position.z + offsetZ <= -1)
+        if (transform.position.z + offsetZ >= 15.5 
+            || transform.position.z + offsetZ <= -1.5)
             return (false);
         // || transform.position.y + verticalInput <= -1 || transform.position.y + verticalInput >= 15)
         return (true);
