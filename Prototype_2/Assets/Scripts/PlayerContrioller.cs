@@ -7,7 +7,7 @@ public class PlayerContrioller : MonoBehaviour
     private float horizontalInput;
     private float verticalInput;
 
-    private int playerSpeed = 15;
+    private int playerSpeed = 10;
     private float xRange = 20.0f;
     public GameObject projectilePrefab;    
     public Transform projectileSpawnPoint;
@@ -20,10 +20,13 @@ public class PlayerContrioller : MonoBehaviour
             transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * playerSpeed);
         if (verticalInput != 0 && isValidOffsetZ(verticalInput))
             transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * playerSpeed);
+        
         if (Input.GetKeyDown(KeyCode.Space))
-        {
             Instantiate(projectilePrefab, projectileSpawnPoint.position, projectilePrefab.transform.rotation);
-        }
+        if (Input.GetKey(KeyCode.Q))
+            transform.Rotate(Vector3.up, -1.0f);
+        if (Input.GetKey(KeyCode.E))
+            transform.Rotate(Vector3.up, 1.0f);
     }
 
     private bool isValidOffsetX(float offsetX)
@@ -31,7 +34,6 @@ public class PlayerContrioller : MonoBehaviour
         if (transform.position.x + offsetX >= xRange 
           || transform.position.x + offsetX <= -xRange)
             return (false);
-                // || transform.position.y + verticalInput <= -1 || transform.position.y + verticalInput >= 15)
         return (true);
     }
     private bool isValidOffsetZ(float offsetZ)
@@ -39,7 +41,6 @@ public class PlayerContrioller : MonoBehaviour
         if (transform.position.z + offsetZ >= 15.5 
             || transform.position.z + offsetZ <= -1.5)
             return (false);
-        // || transform.position.y + verticalInput <= -1 || transform.position.y + verticalInput >= 15)
         return (true);
     }
 }
