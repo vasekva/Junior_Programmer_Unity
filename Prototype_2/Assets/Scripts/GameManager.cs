@@ -13,8 +13,10 @@ public class GameManager : MonoBehaviour
 
         if (lives <= 0)
         {
-            Debug.Log(("GameOver!"));
             lives = 0;
+            Debug.Log(("GameOver!"));
+            Debug.Log("Your score: " + score);
+            Application.Quit();
         }
         Debug.Log("Lives: " + lives);
     }

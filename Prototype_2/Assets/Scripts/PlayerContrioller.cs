@@ -8,7 +8,7 @@ public class PlayerContrioller : MonoBehaviour
     private float verticalInput;
 
     private int playerSpeed = 10;
-    private float xRange = 20.0f;
+    private float xRange = 17.0f;
     public GameObject projectilePrefab;    
     public Transform projectileSpawnPoint;
 
@@ -24,9 +24,9 @@ public class PlayerContrioller : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
             Instantiate(projectilePrefab, projectileSpawnPoint.position, transform.rotation);
         if (Input.GetKey(KeyCode.Q))
-            transform.Rotate(Vector3.up, -1.0f);
+            transform.Rotate(Vector3.up, -3.0f);
         if (Input.GetKey(KeyCode.E))
-            transform.Rotate(Vector3.up, 1.0f);
+            transform.Rotate(Vector3.up, 3.0f);
     }
 
     private bool isValidOffsetX(float offsetX)
