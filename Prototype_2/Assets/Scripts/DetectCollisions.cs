@@ -12,11 +12,6 @@ public class DetectCollisions : MonoBehaviour
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
-    void Update()
-    {
-
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         // Debug.Log("Colliding");
@@ -24,14 +19,15 @@ public class DetectCollisions : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Player");
-            gameManager.AddLives(-3);
-            Destroy(other.gameObject);
+            gameManager.AddLives(-1);
+            Destroy(gameObject);
         }
         else if (other.CompareTag("Food"))
         {
             Debug.Log("Animal");
-            gameManager.AddScore(5);
-            Destroy(gameObject);
+            GetComponent<AnimalHunger>().FeedAnimal(1);
+            // gameManager.AddScore(5);
+            // Destroy(gameObject);
             Destroy(other.gameObject);
         }
     }

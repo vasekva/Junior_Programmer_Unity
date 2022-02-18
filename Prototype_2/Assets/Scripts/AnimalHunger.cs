@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,12 +18,7 @@ public class AnimalHunger : MonoBehaviour
         hungerSlider.value = 0;
         hungerSlider.fillRect.gameObject.SetActive(false);
 
-        // gameManager = gameObject.Find("GameManager").GetComponent<GameManager>();
-    }
-
-    void Update()
-    {
-        
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     public void FeedAnimal(int amount)

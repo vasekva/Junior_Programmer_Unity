@@ -11,11 +11,6 @@ public class PlayerContrioller : MonoBehaviour
     private float xRange = 20.0f;
     public GameObject projectilePrefab;    
     public Transform projectileSpawnPoint;
-    
-    void Start()
-    {
-        
-    }
 
     void Update()
     {

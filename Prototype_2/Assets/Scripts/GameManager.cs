@@ -7,16 +7,6 @@ public class GameManager : MonoBehaviour
     private int score = 0;
     private int lives = 3;
     
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
     public void AddLives(int value)
     {
         lives += value;
